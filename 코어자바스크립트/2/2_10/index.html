@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 로그인 구현하기
+        let id;
+        let password;
+
+        id = prompt("아이디를 입력하세요", "");
+        if(id == "Admin") {
+            password = prompt("비밀번호를 입력해주세요.", "");
+            if(password == "TheMaster") {
+                alert("환영합니다!");
+            } else if (password == null || password == "") {
+                alert("취소되었습니다.");
+            } else {
+                alert("인증에 실패하였습니다.");
+            }
+        } else if(id == null || id == "") {
+            alert("취소되었습니다.");
+        } else {
+            alert("아이디를 확인해주세요.");
+        }
+
+    </script>
+</body>
+</html>

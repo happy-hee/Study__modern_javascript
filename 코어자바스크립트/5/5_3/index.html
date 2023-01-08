@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+         * 1. 첫 글자를 대문자로 변경
+         */
+        // function ucFirst(text) {
+        //     //과제를 풀 때 이 코드를 안 넣어서 아쉬웠음.
+        //     if (!str) return str;
+
+        //     return text[0].toUpperCase() + text.slice(1);
+        // }
+
+        // console.log(ucFirst("john") == "John");
+
+        /**
+         * 2. 스팸 문자열 걸러내기
+         */
+        //str에 'viagra’나 'XXX’라는 문자열이 있으면 true를 반환
+
+        // function checkSpam(str) {
+        //     let target1 = 'viagra'.toLowerCase();
+        //     let target2 = 'xXxX'.toLowerCase();
+        //     str = str.toLowerCase();
+
+        //     return str.includes(target1) || str.includes(target2);
+        // }
+
+        // alert( checkSpam('buy ViAgRA now') );
+        // alert( checkSpam('free xxxxx') );
+        // alert( checkSpam("innocent rabbit") );
+
+        /**
+         * 3. 문자열 줄이기
+         */
+
+        //str의 길이를 확인하고, 최대 길이 maxlength를 초과하는 경우 str의 끝을 생략 부호 ("…")로 대체
+        // function truncate(str, maxlength) {
+        //     if(str.length > maxlength) {
+        //         return str.slice(0, maxlength-1) + '…';
+        //     } else {
+        //         return str;
+        //     }
+
+        //     //해답 코드에서는 3항 연산자를 사용함(조건 ? 맞을시 : 안맞을시)
+        // }
+
+        // console.log(truncate('안녕하세요', 2));
+
+        /**
+         * 4. 숫자만 추출하기
+         */
+        // function extractCurrencyValue(str) {
+        //     return +str.slice(1);
+        // }
+
+        // alert( extractCurrencyValue('$120') === 120 );
+    </script>
+</body>
+</html>

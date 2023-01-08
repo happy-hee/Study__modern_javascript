@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. 문서에서 data-widget-name이라는 속성을 가진 요소를 찾고, 해당 요소의 값을 읽는 코드를 작성 -->
+    <div data-widget-name="menu">Choose the genre</div>
+
+    <script>
+        alert(document.querySelector('[data-widget-name]').dataset.widgetName);
+    </script>
+
+
+</body>
+</html>

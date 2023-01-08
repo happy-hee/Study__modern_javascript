@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. createTextNode vs innerHTML vs textContent -->
+    
+    <!-- 빈 DOM 요소 elem과 text라는 문자열이 있다.
+        셋 중에서 같은 동작을 수행하는 명령어는 무엇일까? -->
+
+    <!-- 
+    1. elem.append(document.createTextNode(text))
+    2. elem.innerHTML = text
+    3. elem.textContent = text
+
+    정답: 1, 3 -->
+    
+    <div id="elem1"></div>
+    <div id="elem2"></div>
+    <div id="elem3"></div>
+    <script>
+        let text = '<b>text</b>';
+
+        elem1.append(document.createTextNode(text));
+        elem2.innerHTML = text;
+        elem3.textContent = text;
+    </script>
+
+    <!-- ============================================================= -->
+
+    <!-- 2. 요소 삭제하기 -->
+
+    <!-- 요소의 모든 하위 요소들을 삭제하는 clear(elem) 이라는 함수를 만들어 보자. -->
+
+    <ol id="elem">
+        <li>Hello</li>
+        <li>World</li>
+    </ol>
+
+    <script>
+        function clear(elem) {
+            //내가 생각했던 것
+            //elem.children.remove();
+
+            //해답
+            // remove()는 elem.childNodes 를 변화시키기 때문에 반복문을 실행할 때마다 0번째 인덱스부터 시작해야만 한다. 그래서 for문이나 for...in 문을 사용하면 안됨.
+
+            //질문. 
+            //1. 여기서 firstElementChild 를 사용하면 안 되는 건지?
+            //2. while 문을 써야한다는게 이해가 되지 않음.
+            while (elem.firstChild) {
+                elem.firstChild.remove();
+            }
+        }
+
+        clear(elem); // elem 내부 리스트 삭제
+    </script>
+
+    <!-- 남는 시간에 나머지 과제들도 할 것 https://ko.javascript.info/modifying-document -->
+</body>
+</html>

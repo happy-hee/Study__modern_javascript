@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="test_1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>육상 동물
+          <ul>
+            <li>포유류
+              <ul>
+                <li>소</li>
+                <li>당나귀</li>
+                <li>개</li>
+                <li>호랑이</li>
+              </ul>
+            </li>
+            <li>비 포유류
+              <ul>
+                <li>뱀</li>
+                <li>새</li>
+                <li>도마뱀</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <script>
+        for (let li of document.querySelectorAll('li')) {
+            // li 노드 안에 있는 텍스트를 출력
+            let title = li.firstChild.textContent;
+
+            title = title.trim(); // 텍스트 끝에 있는 공백을 지웁니다.
+
+            // li 노드 아래에 있는 모든 <li> 태그의 개수를 출력
+            let count = li.getElementsByTagName('li').length;
+
+            alert(title + ': ' + count);
+        }
+      </script>
+</body>
+</html>

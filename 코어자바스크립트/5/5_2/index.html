@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 수를 입력받아 덧셈하기
+        // let num1 = +prompt("첫번째 숫자를 입력하세요.", 0);
+        // let num2 = +prompt("두번째 숫자를 입력하세요.", 0);
+
+        // alert(`두 수의 합은 ${num1 + num2} 입니다.`);
+
+        //2. 6.35.toFixed(1) == 6.3이 되는 이유
+        // 원래 반올림하면 6.4가 되어야 하는데, 10진법으로 나타낸 소수 6.35는 정밀도 손실이 일어나 6.3이 됨
+        //6.35로 출력하는 방법
+        //1.
+        // let num = 6.35;
+        // value1 = (num*10).toFixed(20);        //alert((6.35*10).toFixed(20));
+        // alert(value1);
+        // //2. 
+        // alert(Math.round(6.35*100/10));
+        
+        //3. 숫자를 입력할 때까지 반복하기
+        function readNumber() {
+            let num;
+            while(isFinite(num) !== true) {
+                num = prompt("숫자를 입력하세요", '');
+            }
+
+            alert(num);
+        }
+
+        readNumber();
+    </script>
+</body>
+</html>
